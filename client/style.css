@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+	--paddingBtns: 0 8px;
+	--fontSizeBtn: 14px;
+	--borderRadiusBtn: 3px;
+
+	--openBtnBgColor: #DFE1E6;
+	--openBtnColor: #172B4D;
+
+	--inProgressBtnBgColor: #0052CC;
+	--inProgressBtnColor: #FFFFFF;
+
+	--doneBtnBgColor: #00875A;
+	--doneBtnColor: #FFFFFF;
+}
+
+body {
+	/* display: flex; */
+}
+
+ul {
+	list-style-type: none;
+}
+
+.spinner {
+	display: flex;
+	margin: 0 auto;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+.container h1 {
+	text-align: center;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0 7.5%;
+}
+
+.buttons-container {
+	display: flex;
+	justify-content: space-between;
+	margin: 5% 7.5%;
+}
+
+.error-message {
+	text-align: center;
+}
+
+.status-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	font-size: 2rem;
+    border-radius: var(--borderRadiusBtn);
+	padding: var(--paddingBtns);
+	font-size: var(--fontSizeBtn)
+}
+
+.open-button {
+	background-color: var(--openBtnBgColor);
+	color: var(--openBtnColor);
+}
+
+.progress-button {
+	background-color: var(--inProgressBtnBgColor);
+	color: var(--inProgressBtnColor);
+}
+
+.done-button {
+	background-color: var(--doneBtnBgColor);
+	color: var(--doneBtnColor);
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.cards li {
+	margin: 1rem 0;
+}
+
+.card {
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+	margin: 1rem;
+	padding: 1rem;
+	border: none;
+	border-radius: 8px;
+	background-color: #fff;
+	width: 200px;
+	height: 100%;
+	word-wrap: break-word;
+}
+
+.card .title-container h2 {
+	font-weight: bold;
+	margin: 0;
+	line-height: 1.6;
+	font-size: 1rem;
+}
+
+.card .title-container {
+	height: 130px;
+}
+
+.card .content-container {
+	height: 100px;
+}
+
+.card .content-container .ticket-id {
+	color: #5e6c84
+}
+
+@media screen and (max-width: 370px) {
+	.container h1 {
+		font-size: 2.7rem;
+	}
+  }
+  
+  @media screen and (min-width: 600px) {
+	.card {
+	  flex: 1 1 calc(50% - 2rem);
+	}
+  }
+  
+  @media screen and (min-width: 900px) {
+	.card {
+	  flex: 1 1 calc(33% - 2rem);
+	}
+  }
